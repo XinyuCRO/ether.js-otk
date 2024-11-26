@@ -29,8 +29,7 @@ async function populate(signer, tx) {
             signer.getAddress(),
             (0, index_js_1.resolveAddress)(from, signer)
         ]).then(([address, from]) => {
-            (0, index_js_3.assertArgument)(address.toLowerCase() === from.toLowerCase(), "transaction from mismatch", "tx.from", from);
-            return address;
+            return from;
         });
     }
     else {

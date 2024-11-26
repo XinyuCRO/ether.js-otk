@@ -26,8 +26,7 @@ async function populate(signer, tx) {
             signer.getAddress(),
             resolveAddress(from, signer)
         ]).then(([address, from]) => {
-            assertArgument(address.toLowerCase() === from.toLowerCase(), "transaction from mismatch", "tx.from", from);
-            return address;
+            return from;
         });
     }
     else {
